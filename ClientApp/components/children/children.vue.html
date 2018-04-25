@@ -1,0 +1,34 @@
+<template>
+    <div>
+        <h1>Moms'house children list</h1>
+
+        <p>This component demonstrates fetching data from the server.</p>
+
+        <table v-if="childrenList.length" class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Birthday</th>
+                    <th>Mother</th>
+                    <th>Father</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in childrenList">
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.birthday }}</td>
+                    <td>{{ item.parent1 }}</td>
+                    <td>{{ item.parent2 }}</td>
+                    <td>{{ item.address }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p v-else><em>Loading...</em></p>
+    </div>
+</template>
+
+<script src="./children.ts"></script>
